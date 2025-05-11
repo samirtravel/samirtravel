@@ -1,3 +1,4 @@
+/* Keyframe Animation */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -9,17 +10,184 @@
     }
 }
 
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    color: #333333;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #bdc0c2;
+    padding: 1.5em 2em;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.nav:hover {
+    background-color: #8e9497;
+    color: white;
+}
+
+.nav a {
+    font-size: 1.1em;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    text-decoration: none;
+    margin-right: 1.5em;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.nav a:hover {
+    color: #161615;
+}
+
+/* Top Logo */
 .toplogo {
     animation: fadeIn 1s ease-in-out;
-    width: 100px;
-    height: 100px;
-    transition: width 0.3s ease, height 0.3s ease;
-    
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    transition: width 0.3s ease, height 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .toplogo:hover {
     cursor: pointer;
-    width: 150px;
-    height: 150px;
-    transition: width 0.3s ease, height 0.3s ease;
+    width: 160px;
+    height: 160px;
+    transform: rotate(10deg);
+}
+
+/* Main Content */
+.program-content {
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 3em;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out;
+    transition: transform 0.3s ease;
+}
+
+.program-content:hover {
+    transform: translateY(-10px);
+}
+
+.nt {
+    animation: fadeIn 1s ease-in-out;
+    font-size: 25px;
+    color: #0026ff;
+    margin-top: 10px;
+    border: 2px solid #0026ff;
+    padding: 15px 25px;
+    border-radius: 50px;
+    background-color: #e6f2ff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    width: max-content;
+    text-align: center;
+}
+
+.nt:hover {
+    background-color: #0026ff;
+    color: white;
+}
+
+/* Headers */
+h1, h2, h3 {
+    font-family: 'Arial', sans-serif;
+    font-size: 26px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 22px;
+    color: #1b6ab9;
+}
+
+/* Translation Buttons */
+.lang-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    gap: 1em;
+}
+
+.lang-buttons button {
+    background-color: #1b6ab9;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+}
+
+.lang-buttons button:hover {
+    background-color: #003366;
+    transform: scale(1.05);
+}
+
+/* List of Program Days */
+ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1.1em;
+    color: #555;
+}
+
+ul li {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+ul li::before {
+    content: "✔️ ";
+    color: #1b6ab9;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 3em;
+    color: #555;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-top: 2px solid #ddd;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav a {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .program-content {
+        padding: 2em;
+    }
+
+    .lang-buttons {
+        flex-direction: column;
+    }
 }
