@@ -9,6 +9,17 @@
     }
 }
 
-.title {
+.toplogo {
     animation: fadeIn 1s ease-in-out;
+    width: 100px;
+    height: 100px;
+    transition: width 0.3s ease, height 0.3s ease;
+    
+}
+
+.toplogo:hover {
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+    transition: width 0.3s ease, height 0.3s ease;
 }
