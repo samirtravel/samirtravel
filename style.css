@@ -19,15 +19,18 @@ body {
     color: #333333;
 }
 
+/* Navigation */
 .nav {
-    display: flex;
-    justify-content: space-between;
+    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     background-color: #bdc0c2;
-    padding: 1.5em 2em;
+    padding: 1em;
     border-radius: 10px 10px 0 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
+    text-align: center;
 }
 
 .nav:hover {
@@ -36,11 +39,10 @@ body {
 }
 
 .nav a {
-    font-size: 1.1em;
-    font-family: 'Arial', sans-serif;
+    font-size: 1em;
     color: white;
     text-decoration: none;
-    margin-right: 1.5em;
+    margin: 0.5em 1em;
     transition: color 0.3s ease;
     text-transform: uppercase;
 }
@@ -49,28 +51,30 @@ body {
     color: #161615;
 }
 
-/* Top Logo */
+/* Logo */
 .toplogo {
     animation: fadeIn 1s ease-in-out;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    transition: width 0.3s ease, height 0.3s ease, transform 0.3s ease;
+    transition: 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: auto;
 }
 
 .toplogo:hover {
     cursor: pointer;
-    width: 160px;
-    height: 160px;
+    width: 120px;
+    height: 120px;
     transform: rotate(10deg);
 }
 
 /* Main Content */
 .program-content {
-    max-width: 900px;
+    max-width: 95%;
     margin: 2em auto;
-    padding: 3em;
+    padding: 2em;
     background-color: #ffffff;
     border-radius: 15px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
@@ -79,21 +83,21 @@ body {
 }
 
 .program-content:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
 }
 
 .nt {
     animation: fadeIn 1s ease-in-out;
-    font-size: 25px;
+    font-size: 1.2em;
     color: #0026ff;
-    margin-top: 10px;
+    margin: 1em auto;
     border: 2px solid #0026ff;
-    padding: 15px 25px;
+    padding: 10px 20px;
     border-radius: 50px;
     background-color: #e6f2ff;
     transition: background-color 0.3s ease, color 0.3s ease;
     display: inline-block;
-    width: max-content;
+    width: auto;
     text-align: center;
 }
 
@@ -104,8 +108,7 @@ body {
 
 /* Headers */
 h1, h2, h3 {
-    font-family: 'Arial', sans-serif;
-    font-size: 26px;
+    font-size: 1.3em;
     color: #333;
     font-weight: bold;
     margin-bottom: 15px;
@@ -113,25 +116,26 @@ h1, h2, h3 {
 }
 
 h2 {
-    font-size: 22px;
+    font-size: 1.1em;
     color: #1b6ab9;
 }
 
 /* Translation Buttons */
 .lang-buttons {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin-top: 2em;
-    gap: 1em;
+    gap: 0.5em;
 }
 
 .lang-buttons button {
     background-color: #1b6ab9;
     color: white;
-    padding: 12px 24px;
+    padding: 10px 20px;
     border: none;
     border-radius: 30px;
-    font-size: 1.2em;
+    font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
     text-transform: uppercase;
@@ -142,17 +146,17 @@ h2 {
     transform: scale(1.05);
 }
 
-/* List of Program Days */
+/* List Styling */
 ul {
     list-style: none;
     padding-left: 0;
-    font-size: 1.1em;
+    font-size: 1em;
     color: #555;
 }
 
 ul li {
-    margin-bottom: 15px;
-    line-height: 1.8;
+    margin-bottom: 10px;
+    line-height: 1.6;
 }
 
 ul li::before {
@@ -163,7 +167,7 @@ ul li::before {
 /* Footer */
 footer {
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1em;
     margin-top: 3em;
     color: #555;
     background-color: #f9f9f9;
@@ -171,23 +175,29 @@ footer {
     border-top: 2px solid #ddd;
 }
 
-/* Responsiveness */
-@media screen and (max-width: 768px) {
-    .nav {
-        flex-direction: column;
-        align-items: center;
-    }
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
 
-    .nav a {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .program-content {
-        padding: 2em;
+/* Responsive Tweaks */
+@media screen and (max-width: 480px) {
+    h1, h2, h3 {
+        font-size: 1em;
     }
 
     .lang-buttons {
         flex-direction: column;
+    }
+
+    .lang-buttons button {
+        width: 90%;
+    }
+
+    .nt {
+        font-size: 1em;
+        padding: 8px 16px;
     }
 }
